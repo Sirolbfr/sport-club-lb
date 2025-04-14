@@ -1,1 +1,3 @@
-document.getElementById("email").placeholder = "example@domain.com";
+window.onload = function() {
+    document.getElementById("email").placeholder = "mail@exemple.com";
+}

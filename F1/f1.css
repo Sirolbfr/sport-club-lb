@@ -1,0 +1,13 @@
+#track {
+    display: grid;
+    grid-template-columns: 20% 35% 45%;
+    align-items: center;
+
+    & img {
+        width: 50%;
+
+        & #layout {
+            filter: invert();
+        }
+    }
+}

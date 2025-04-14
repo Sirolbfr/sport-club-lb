@@ -1,40 +1,52 @@
-html {
-    font-family: sans-serif;
+/* --------- Colours --------- */
+
+:root {
+    --main_blue:#042D5F;
+    --dark_blue:#010c18;
+    --f1:#FF1E00;
+    --wec:#042D5F;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+
+/* --------- General --------- */
+
+html {
+    font-family: "Roboto", sans-serif;
 }
 
 
 /* --------- Header --------- */
 
 header {
-    background-color: #042D5F;
-    position: absolute;
+    background-color: var(--main_blue);
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    
     padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.name {
-    margin-left: 15px;
-    & a {
-        color: #fff;
-        font-weight: 700;
+    & .name {
+        margin-left: 15px;
+    
+        & a {
+            color: #fff;
+            font-weight: 700;
+            font-size: 95%;
+            text-decoration: none;
+        }
     }
-}
 
-.profile {
-    margin-right: 15px;
-    & img {
-        clip-path: circle(50%);
-        width: 50px;
+    & .profile {
+        margin-right: 15px;
+    
+        & img {
+            clip-path: circle(50%);
+            width: 50px;
+        }
     }
 }
 
@@ -42,13 +54,47 @@ header {
 /* --------- Main --------- */
 
 nav {
-    position: absolute;
-    top: 65px;
+    position: sticky;
+    top: 83px;
+    left: 0px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap : 15%;
+    justify-content: space-evenly;
     padding: 10px 0;
+    background-color: var(--dark_blue);
+
+    & a {
+        text-decoration: none;
+        /* border: 1px solid #f0f;*/
+    }
+
+    & :nth-child(1) {
+        color: #FF1E00;
+    }
+
+    & :nth-child(2) {
+        color: #0EB9FF;
+    }
+
+    & :nth-child(3) {
+        color: #D91542;
+    }
+
+    & :nth-child(4) {
+        color: white;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin: 0 30px;
+
+    & img {
+        width: 80%;
+    }
 }
 
 
@@ -56,58 +102,67 @@ nav {
 
 footer {
     position: absolute;
-    bottom: 0;
-    padding: 20px 0;
-    gap: 20px;
+    padding: 0 20px 30px;
     display: flex;
     /* flex: 40% 60%; */
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-}
 
-.newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    & .newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        & h2 {
+            margin-bottom: 1%;
+        }
+    
+        & #email_cont {
+            display: flex;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding-right: 8%;
+        
+            & p {
+                padding: 0 5%;
+            }
+    
+            & #email {
+                border: none;
+            }
+    
+            & button {
+                border-radius: 15px;
+                border: none;
+            }
+        }
+    }
 
-#email_cont {
-    display: flex;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-#email {
-    border: none;
-}
-
-button {
-    border-radius: 15px;
-    border: none;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.socials_list {
-    display: flex;
-    gap: 15px;
-}
-
-.social {
-    width: 48px;
-    height: 48px;
-}
-
-.ico{
-    width: 48px;
-    filter: saturate(0.5);
-    transition: filter 400ms;
-    &:hover {
-        filter: saturate(1);
+    & .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        & .socials_list {
+            display: flex;
+            gap: 25px;
+    
+            & .social {
+                width: 48px;
+                height: 48px;
+    
+                & .ico{
+                    width: 48px;
+                    filter: saturate(0.5);
+                    transition: filter 400ms;
+                
+                    &:hover {
+                        filter: saturate(1);
+                    }
+                }
+            }        
+        }
     }
 }
 
@@ -115,9 +170,7 @@ button {
 /* --------- BREAKPOINTS --------- */
 
 @media screen and (min-width: 700px) {
-    .handle {
-        display: inline;
-    }
+
 }
 
 @media screen and (min-width: 1025px) {
