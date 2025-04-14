@@ -6,8 +6,9 @@
     & img {
         width: 50%;
 
-        & #layout {
-            filter: invert();
-        }
+    }
+
+    & #layout {
+        filter: invert();
     }
 }
