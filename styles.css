@@ -2,7 +2,7 @@
 
 :root {
     --main_blue:#042D5F;
-    --dark_blue:#010c18;
+    --dark_blue:hsl(211, 92%, 8%);
     --f1:#FF1E00;
     --wec:#042D5F;
 }
@@ -54,8 +54,8 @@ header {
 /* --------- Main --------- */
 
 nav {
-    position: sticky;
-    top: 83px;
+    position: relative;
+    /* top: 83px; */
     left: 0px;
     width: 100%;
     display: flex;
@@ -85,26 +85,13 @@ nav {
     }
 }
 
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    margin: 0 30px;
-
-    & img {
-        width: 80%;
-    }
-}
-
 
 /* --------- Footer --------- */
 
 footer {
-    position: absolute;
-    padding: 0 20px 30px;
+    position: relative;
+    padding: 0 25px;
     display: flex;
-    /* flex: 40% 60%; */
     flex-direction: column;
     justify-content: center;
 
@@ -123,6 +110,7 @@ footer {
             border: 1px solid black;
             border-radius: 15px;
             padding-right: 8%;
+            align-items: center;
         
             & p {
                 padding: 0 5%;
@@ -130,6 +118,7 @@ footer {
     
             & #email {
                 border: none;
+                height: 48px;
             }
     
             & button {

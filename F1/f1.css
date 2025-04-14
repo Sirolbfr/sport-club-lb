@@ -1,14 +1,51 @@
-#track {
+.layout {
+    filter: invert();
+    height: 90px;
+}
+
+#content section {
+    border: 1px solid #0ff;
+}
+
+#results {
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: 20% 35% 45%;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 35px 50px 30px 30px 140px;
+    grid-auto-flow: row;
     align-items: center;
-
-    & img {
-        width: 50%;
-
+    justify-items: center;
+    justify-content: center;
+    & h2 {
+        grid-column-end: span 3;
     }
 
-    & #layout {
-        filter: invert();
+    & .layout {
+        grid-column-end: span 2;
+        grid-row-end: span 3;
+        height: 100px;
+    }
+
+    & #rankings {
+        grid-column-end: span 2;
+    }
+}
+
+#next_race {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 35px 60px 25px 25px 25px;
+    align-items: center;
+    justify-items: center;
+    
+    & h2 {
+        grid-column-end: span 3;
+    }
+
+    & .layout {
+        grid-column-end: span 2;
+        grid-row-end: span 4;
+        height: 90px;
     }
 }

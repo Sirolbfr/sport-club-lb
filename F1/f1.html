@@ -7,7 +7,8 @@
         <link href="../styles.css" rel="stylesheet">
         <link href="f1.css" rel="stylesheet">
         <link rel="icon" href="https://cdn.prod.website-files.com/6703a475ba8103794242a832/67064e7084c09343c48e3a77_Faviconx32.png">
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="../script.js"></script>
+        <script type="text/javascript" src="f1.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
         </header>
         <section>
             <nav>
-                <a href="./F1/f1.html">F1</a>
+                <a href="./f1.html">F1</a>
                 <a href="../WEC/wec.html">WEC</a>
                 <a href="../Moto/moto.html">Moto GP</a>
                 <a href="../WRC/wrc.html">WRC</a>
@@ -31,11 +32,39 @@
             <section id="content">
                 <section id="results">
                     <h2>Résultats</h2>
-                    <div id="track">
-                        <img src="https://flagsapi.com/SA/shiny/48.png" alt="Arabie Saoudite" title="Arabie Saoudite">
-                        <h3>Jeddah</h3>
-                        <img src="../Assets/SA.png" alt="Circuit de Jeddah" title="Circuit de Jeddah" id="layout">
-                    </div>
+                    <img src="https://flagsapi.com/BH/shiny/48.png" alt="Bahreïn" title="Bahreïn" class="flag">
+                    <img src="../Assets/BH.avif" alt="Circuit International de Sakhir" title="Circuit International de Sakhir" class="layout">
+                    <h3 class="name">Sakhir</h3>
+                    <h3 class="place">Bahreïn</h3>
+                    <table id="rankings">
+                        <tr>
+                            <th>Pos</th>
+                            <th>Nat.</th>
+                            <th>Pilote</th>
+                        </tr>
+                        <tr>
+                            <td>1er</td>
+                            <td><img src="https://flagsapi.com/AU/shiny/24.png" alt="UK"></td>
+                            <td>Oscar Piastri</td>
+                        </tr>
+                        <tr>
+                            <td>2e</td>
+                            <td><img src="https://flagsapi.com/GB/shiny/24.png" alt="UK"></td>
+                            <td>Georges Russel</td>
+                        </tr>
+                        <tr>
+                            <td>3e</td>
+                            <td><img src="https://flagsapi.com/GB/shiny/24.png" alt="UK"></td>
+                            <td>Lando Norris</td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="next_race">
+                    <h2>Prochaine course</h2>
+                    <img src="../Assets/SA.png" alt="Circuit de Jeddah" title="Circuit de Jeddah" class="layout">
+                    <img src="https://flagsapi.com/SA/shiny/48.png" alt="Arabie Saoudite" title="Arabie Saoudite" class="flag">
+                    <h3 class="place">Jeddah, Arabie Saoudite</h3>
+                    <p id="countdown">Countdown here</p>
                 </section>
             </section>
         </section>
@@ -69,7 +98,7 @@
                     </div>
                     <div class="social" id="tiktok">
                         <a href="https://www.tiktok.com/@fia">
-                            <img src="../Assets/tkt.ico" alt="Tiktok"  class="ico"  title="@fia">
+                            <img src="../Assets/tktk.ico" alt="Tiktok"  class="ico"  title="@fia">
                         </a>
                     </div>
                 </div>
