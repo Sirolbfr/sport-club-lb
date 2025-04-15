@@ -1,11 +1,141 @@
+body {
+    margin: 0;
+
+    &:nth-child(2) {
+        margin-top: var(--margin-after-header);
+    }
+}
+
+/* --------- Carousel --------- */
+
+#crsl_cont {
+    position: relative;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    min-height: 180px;
+
+    & #slides {
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        /* anchor-name: --caroussel; */ /* Scroll buttons */
+        padding: 0;
+        margin: 0;
+
+        & li {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            list-style-type: none;
+            background-color: var(--blue);
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            align-items: center;
+
+            & .title h3 {
+                color: white;
+                padding: 0px 20px;
+                font-size: 1.3rem;
+            }
+
+            & .image_cont {
+                display: flex;
+                justify-content: right;
+                overflow: hidden;
+
+                & img {
+                    height: 30vw;
+                }
+            }
+        }
+
+        /* --------- Scroll Butoons (WIP) --------- */
+
+        /* &::scroll-button(*) {
+            border: 0;
+            font-size: 2rem;
+            background: none;
+            color: rgb(0 0 0 / 0.7);
+            cursor: pointer;
+            position: absolute;
+            position-anchor: --caroussel;
+
+            &:hover {
+                color: rgb(0 0 0 / 1);
+            }
+
+            &:focus {
+                color: rgb(0 0 0 / 1);
+            }
+
+            &:active {
+                translate: 1px 1px;
+            }
+
+            &:disabled {
+                color: rgb(0 0 0 / 0.2);
+                cursor: unset;
+            }
+        }
+
+        &::scroll-button(left) {
+            content: "◄";
+            right: calc(anchor(left) - 70px);
+            bottom: calc(anchor(top) + 13px);
+        }
+          
+        &::scroll-button(right) {
+            content: "►";
+            left: calc(anchor(right) - 70px);
+            bottom: calc(anchor(top) + 13px);
+        } */
+    }
+}
+
+
+/* --------- Content --------- */
+
 article {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    margin: 0 25px;
+    margin: 0 25px 20px;
 
     & img {
         width: 80%;
+    }
+
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+
+/* --------- Breakpoints --------- */
+
+@media screen and (max-width: 500px) {
+    body {
+        color: green;
+    }
+
+    .image_cont {
+        justify-content: center;
+    }
+
+    .crsl_img {
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        color: red;
+    }
+
+    .image_cont img {
+        height: 500px;
     }
 }

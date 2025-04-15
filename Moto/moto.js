@@ -1,4 +1,4 @@
-let countDownDate = new Date("Apr 20, 2025 19:00:00").getTime();
+let countDownDate = new Date("Apr 27, 2025 14:00:00").getTime();
 let x = setInterval(function() {
 
     let now = new Date().getTime();

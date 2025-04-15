@@ -1,3 +1,7 @@
+body:nth-child(2) {
+    margin-top: var(--margin-after-header-plus);
+}
+
 .layout {
     filter: invert();
     height: 90px;
@@ -8,7 +12,6 @@
 }
 
 #results {
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 35px 50px 30px 30px 140px;
@@ -35,9 +38,10 @@
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 35px 60px 25px 25px 25px;
+    grid-template-rows: 35px 60px;
     align-items: center;
     justify-items: center;
+    justify-content: center;
     
     & h2 {
         grid-column-end: span 3;
@@ -49,3 +53,4 @@
         height: 90px;
     }
 }
+
