@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <div class="name">
+            <div class="fia">
                 <a href="../index.html">Féderation Internationale de l'Automobile</a>
             </div>
             <div class="profile">
@@ -27,43 +27,133 @@
                 <a href="./f1.html">F1</a>
                 <a href="../WEC/wec.html">WEC</a>
                 <a href="../Moto/moto.html">Moto GP</a>
-                <a href="../WRC/wrc.html">WRC</a>
             </nav>
             <section id="content">
-                <section id="results">
+                <section id="results" class="bh">
                     <h2>Résultats</h2>
-                    <img src="https://flagsapi.com/BH/shiny/48.png" alt="Bahreïn" title="Bahreïn" class="flag">
-                    <img src="../Assets/BH.avif" alt="Circuit International de Sakhir" title="Circuit International de Sakhir" class="layout">
-                    <h3 class="name">Sakhir</h3>
-                    <h3 class="place">Bahreïn</h3>
+                    <img src="https://flagsapi.com/BH/flat/48.png" alt="Bahreïn" title="Bahreïn" class="flag">
+                    <img src="../Assets/BH.avif" alt="Bahrain International Circuit" title="Bahrain International Circuit" class="layout">
+                    <h3 class="name">Bahrain International Circuit</h3>
+                    <h3 class="place">Sakhir</h3>
+                    <h3 class="country">Bahreïn</h3>
+                    <p id="date">Course du 13/04 (Dim.)</p>
                     <table id="rankings">
                         <tr>
                             <th>Pos</th>
-                            <th>Nat.</th>
                             <th>Pilote</th>
                         </tr>
                         <tr>
-                            <td>1er</td>
-                            <td><img src="https://flagsapi.com/AU/shiny/24.png" alt="UK"></td>
-                            <td>Oscar Piastri</td>
+                            <td>🥇</td>
+                            <td class="mcl"><img src="https://flagsapi.com/AU/flat/24.png" alt="UK">Oscar Piastri</td>
                         </tr>
                         <tr>
-                            <td>2e</td>
-                            <td><img src="https://flagsapi.com/GB/shiny/24.png" alt="UK"></td>
-                            <td>Georges Russel</td>
+                            <td>🥈</td>
+                            <td class="mer"><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Georges Russel</td>
                         </tr>
                         <tr>
-                            <td>3e</td>
-                            <td><img src="https://flagsapi.com/GB/shiny/24.png" alt="UK"></td>
-                            <td>Lando Norris</td>
+                            <td>🥉</td>
+                            <td class="mcl"><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Lando Norris</td>
                         </tr>
+                    </table>
+                    <table id="rankings_ext">
+                        <tr>
+                            <th>Pos</th>
+                            <th>Pilote</th>
+                            <th>Écurie</th>
+                            <th>Pos</th>
+                            <th>Pilote</th>
+                            <th>Écurie</th>
+                        </tr>
+                        <tr>
+                            <td>🥇</td>
+                            <td><img src="https://flagsapi.com/AU/flat/24.png" alt="AU">Oscar Piastri</td>
+                            <td><div class="mcl"></div>McLaren</td>
+                            <td>11e</td>
+                            <td><img src="https://flagsapi.com/IT/flat/24.png" alt="IT">Andrea Kimi Antonelli</td>
+                            <td><div class="mer"></div>Mercedes</td>
+                        </tr>
+                        <tr>
+                            <td>🥈</td>
+                            <td><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Georges Russel</td>
+                            <td><div class="mer"></div>Mercedes</td>
+                            <td>12e</td>
+                            <td><img src="https://flagsapi.com/TH/flat/24.png" alt="UK">Alex Albon</td>
+                            <td><div class="wil"></div>Williams</td>
+                        </tr>
+                        <tr>
+                            <td>🥉</td>
+                            <td><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Lando Norris</td>
+                            <td><div class="mcl"></div>McLaren</td>
+                            <td>13e</td>
+                            <td><img src="https://flagsapi.com/FR/flat/24.png" alt="FR">Isack Hadjar</td>
+                            <td><div class="vis"></div>Racing Bulls</td>
+                        </tr>
+                        <tr>
+                            <td>4e</td>
+                            <td><img src="https://flagsapi.com/MC/flat/24.png" alt="UK">Charles Leclerc</td>
+                            <td><div class="fer"></div>Ferrari</td>
+                            <td>14e</td>
+                            <td><img src="https://flagsapi.com/AU/flat/24.png" alt="UK">Jack Doohan</td>
+                            <td><div class="alp"></div>Alpine</td>
+                        </tr>
+                        <tr>
+                            <td>5e</td>
+                            <td><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Lewis Hamilton</td>
+                            <td><div class="fer"></div>Ferrari</td>
+                            <td>15e</td>
+                            <td><img src="https://flagsapi.com/ES/flat/24.png" alt="ES">Fernando Alonso</td>
+                            <td><div class="ast"></div>Aston Martin</td>
+                        </tr>
+                        <tr>
+                            <td>6e</td>
+                            <td><img src="https://flagsapi.com/NL/flat/24.png" alt="NL">Max Verstappen</td>
+                            <td><div class="rbl"></div>Red Bull Racing</td>
+                            <td>16e</td>
+                            <td><img src="https://flagsapi.com/NZ/flat/24.png" alt="NZ">Liam Lawson</td>
+                            <td><div class="vis"></div>Racing Bulls</td>
+                        </tr>
+                        <tr>
+                            <td>7e</td>
+                            <td><img src="https://flagsapi.com/FR/flat/24.png" alt="FR">Pierre Gasly</td>
+                            <td><div class="alp"></div>Alpine</td>
+                            <td>17e</td>
+                            <td><img src="https://flagsapi.com/CA/flat/24.png" alt="CA">Lance Stroll</td>
+                            <td><div class="ast"></div>Aston Martin</td>
+                        </tr>
+                        <tr>
+                            <td>8e</td>
+                            <td><img src="https://flagsapi.com/FR/flat/24.png" alt="FR">Esteban Ocon</td>
+                            <td><div class="haa"></div>Haas</td>
+                            <td>18e</td>
+                            <td><img src="https://flagsapi.com/BR/flat/24.png" alt="BR">Gabriel Bortoleto</td>
+                            <td><div class="kic"></div>Kick Sauber</td>
+                        </tr>
+                        <tr>
+                            <td>9e</td>
+                            <td><img src="https://flagsapi.com/JP/flat/24.png" alt="JP">Yuki Tsunoda</td>
+                            <td><div class="rbl"></div>Red Bull Racing</td>
+                            <td>19e</td>
+                            <td><img src="https://flagsapi.com/ES/flat/24.png" alt="ES">Carlos Sainz</td>
+                            <td><div class="wil"></div>Wiliams</td>
+                        </tr>
+                        <tr>
+                            <td>10e</td>
+                            <td><img src="https://flagsapi.com/GB/flat/24.png" alt="UK">Oliver Bearman</td>
+                            <td><div class="haa"></div>Haas</td>
+                            <td>20e</td>
+                            <td><img src="https://flagsapi.com/DE/flat/24.png" alt="DE">Nico Hülkenberg</td>
+                            <td><div class="kic"></div>Kick Sauber</td>
+                        </tr>
+                        
                     </table>
                 </section>
                 <section id="next_race">
                     <h2>Prochaine course</h2>
-                    <img src="../Assets/SA.png" alt="Circuit de Jeddah" title="Circuit de Jeddah" class="layout">
-                    <img src="https://flagsapi.com/SA/shiny/48.png" alt="Arabie Saoudite" title="Arabie Saoudite" class="flag">
-                    <h3 class="place">Jeddah, Arabie Saoudite</h3>
+                    <img src="../Assets/SA.png" alt="Jeddah Corniche Circuit" title="Jeddah Corniche Circuit" class="layout">
+                    <img src="https://flagsapi.com/SA/flat/48.png" alt="Arabie Saoudite" title="Arabie Saoudite" class="flag">
+                    <h3 class="name">Jeddah Corniche Circuit</h3>
+                    <h3 class="place">Jeddah</h3>
+                    <h3 class="country">Arabie Saoudite</h3>
                     <p id="countdown">Countdown here</p>
                 </section>
             </section>

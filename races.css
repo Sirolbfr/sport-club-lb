@@ -1,56 +1,299 @@
+:root {
+    --mcl: #FF8000;
+    --mer: #27F4D2;
+    --rbl: #3671C6;
+    --fer: #E8192D;
+    --haa: #B6BABD;
+    --wil: #1867DB;
+    --ast: #229971;
+    --vis: #6691FF;
+    --alp: #0EA1E8;
+    --kic: #52E252;
+}
+
 body:nth-child(2) {
     margin-top: var(--margin-after-header-plus);
 }
 
-.layout {
-    filter: invert();
-    height: 90px;
-}
+#results, #next_race {
+    border-radius: 10px;
+    margin: 0 10px;
 
-#content section {
-    border: 1px solid #0ff;
-}
-
-#results {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 35px 50px 30px 30px 140px;
-    grid-auto-flow: row;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
     & h2 {
-        grid-column-end: span 3;
+        grid-area: h2;
+    }
+
+    & #countdown {
+        grid-area: ct;
     }
 
     & .layout {
-        grid-column-end: span 2;
-        grid-row-end: span 3;
-        height: 100px;
+        grid-area: ly;
+        width: auto;
+        height: auto;
+        max-height: 100px;
+        max-width: 200px;
+    }
+
+    & h3 {
+        grid-area: h3;
+    }
+
+    & .place {
+        grid-area: pl;
+    }
+
+    & .name {
+        grid-area: nm;
+        color: var(--grey);
+        font-size: 80%;
+    }
+
+    & .country {
+        grid-area: cn;
+    }
+
+    & .flag {
+        grid-area: fl;
     }
 
     & #rankings {
-        grid-column-end: span 2;
+        grid-area: rk;
+    }
+
+    & #date {
+        grid-area: dt;
+    }
+
+    & #rankings_ext {
+        grid-area: rk_e;
+    }
+}
+
+#results {
+    background-color: #fafafa;
+    box-shadow: 2px 2px 5px black;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 50px 50px 30px 30px 30px 135px;
+
+    grid-template-areas: 
+    "h2 dt"
+    "fl ly"
+    "pl ly"
+    "cn ly"
+    ". nm"
+    "rk rk";
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    & .layout {
+        filter: invert();
+    }
+
+    & #rankings {
+        & tr td:nth-child(2) {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        & .mcl {
+            text-decoration: underline var(--mcl);
+        }
+    
+        & .mer {
+            text-decoration: underline var(--mer);
+        }
+    
+        & .rbl {
+            text-decoration: underline var(--rbl);
+        }
+    
+        & .fer {
+            text-decoration: underline var(--fer);
+        }
+    
+        & .haa {
+            text-decoration: underline var(--haa);
+        }
+    
+        & .wil {
+            text-decoration: underline var(--wil);
+        }
+    
+        & .ast {
+            text-decoration: underline var(--ast);
+        }
+    
+        & .vis {
+            text-decoration: underline var(--vis);
+        }
+    
+        & .alp {
+            text-decoration: underline var(--alp);
+        }
+    
+        & .kic {
+            text-decoration: underline var(--kic);
+        }
+    }
+
+    & #rankings_ext {
+        display: none;
     }
 }
 
 #next_race {
+    background-color: var(--blue);
+    box-shadow: 2px 2px 5px black;
+    color: white;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 35px 60px;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 50px 5px 50px 25px 25px 40px;
+
+    grid-template-areas: 
+    "h2 ct"
+    ". ."
+    "ly fl"
+    "ly pl"
+    "ly cn"
+    "nm ."
+    ". .";
+
     align-items: center;
     justify-items: center;
-    justify-content: center;
-    
-    & h2 {
-        grid-column-end: span 3;
-    }
+    justify-content: space-evenly;
 
     & .layout {
-        grid-column-end: span 2;
-        grid-row-end: span 4;
-        height: 90px;
+        filter: invert(0%);
     }
 }
 
+
+/* --------- Breakpoints --------- */
+
+@media screen and (min-width: 900px) {
+    #results {
+        height: 80vh;
+        grid-template-columns: 1fr 1fr 1fr 3fr 4fr;
+        grid-template-rows: 2fr 6fr 1fr 3fr 3fr;
+
+        grid-template-areas: 
+        ".  .  h2 h2   dt  "
+        ".  ly ly rk_e rk_e"
+        "fl ly ly rk_e rk_e"
+        "pl cn nm rk_e rk_e";
+
+        & #rankings {
+            display: none;
+        }
+
+        & #rankings_ext {
+            display: inline;
+            
+            & tr td:nth-child(2), tr td:nth-child(5) {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            
+            /* & tr td:nth-child(3), tr td:nth-child(6) {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: 5px;
+            } */
+
+            & .mcl {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--mcl);
+            }
+        
+            & .mer {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--mer);
+            }
+        
+            & .rbl {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--rbl);
+            }
+        
+            & .fer {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--fer);
+            }
+        
+            & .haa {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--haa);
+            }
+        
+            & .wil {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--wil);
+            }
+        
+            & .ast {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--ast);
+            }
+        
+            & .vis {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--vis);
+            }
+        
+            & .alp {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--alp);
+            }
+        
+            & .kic {
+                height: 5px;
+                aspect-ratio: 1;
+                background-color: var(--kic);
+            }
+        }
+    }
+
+    /* Backgrounds */
+
+    /* .bh, .qa, .im, .sa, .sp {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .bh {
+        background-image: url(https://www.autohebdo.fr/app/uploads/2025/04/DPPI_00125007_1588-753x494.jpg);
+    }
+
+    .qa {
+        background-image: url(QA_bg.png);
+    }
+
+    .im {
+        background-image: url(Imola_bg.png);
+    }
+
+    .sa {
+        background-image: url(SA_bg.png);
+    }
+
+    .sp {
+        background-image: url(SP_bg.png);
+    } */
+}

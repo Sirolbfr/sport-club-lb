@@ -10,49 +10,65 @@ body {
 
 #crsl_cont {
     position: relative;
+    display: flex;
     margin: 0;
     left: 0;
     width: 100%;
-    min-height: 180px;
 
     & #slides {
         width: 100%;
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        /* anchor-name: --caroussel; */ /* Scroll buttons */
+        anchor-name: --caroussel; /* Scroll buttons */
         padding: 0;
         margin: 0;
+        height: 30vw;
 
         & li {
             display: grid;
-            grid-template-columns: 45% 55%;
+            grid-template-columns: 50% 50%;
             list-style-type: none;
             background-color: var(--blue);
             flex: 0 0 100%;
             scroll-snap-align: center;
             align-items: center;
 
-            & .title h3 {
-                color: white;
-                padding: 0px 20px;
-                font-size: 1.3rem;
+            & .title {
+                & h3 {
+                    color: white;
+                    padding: 0px 7.5%;
+                    font-size: 2.8vw;
+                }
+
+                & .category {
+                    display: none;
+                }
+            
             }
+            
 
             & .image_cont {
-                display: flex;
-                justify-content: right;
+                position: relative;
                 overflow: hidden;
+                height: 30vw;
 
                 & img {
-                    height: 30vw;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    aspect-ratio: 1;
+                    min-width: 100%;
+                    max-height: 100%;
+                    -webkit-transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(-50%) translateX(-50%);
                 }
             }
         }
 
-        /* --------- Scroll Butoons (WIP) --------- */
+        /* --------- Scroll Buttons (WIP) --------- */
 
-        /* &::scroll-button(*) {
+        &::scroll-button(*) {
             border: 0;
             font-size: 2rem;
             background: none;
@@ -89,7 +105,7 @@ body {
             content: "►";
             left: calc(anchor(right) - 70px);
             bottom: calc(anchor(top) + 13px);
-        } */
+        }
     }
 }
 
@@ -107,35 +123,22 @@ article {
     & img {
         width: 80%;
     }
-
-    & p {
-        margin-bottom: 0;
-    }
 }
 
 
 /* --------- Breakpoints --------- */
 
 @media screen and (max-width: 500px) {
-    body {
-        color: green;
-    }
 
-    .image_cont {
-        justify-content: center;
-    }
-
-    .crsl_img {
-        height: 180px;
-    }
 }
 
-@media screen and (min-width: 900px) {
-    body {
-        color: red;
+@media screen and (min-width: 800px) {
+    .category {
+        display: inline;
+        color: var(--grey);
     }
 
-    .image_cont img {
-        height: 500px;
+    body {
+        color: red;
     }
 }
