@@ -1,4 +1,5 @@
 :root {
+    /* --- F1 --- */
     --mcl: #FF8000;
     --mer: #27F4D2;
     --rbl: #3671C6;
@@ -9,11 +10,48 @@
     --vis: #6691FF;
     --alp: #0EA1E8;
     --kic: #52E252;
+
+    /* --- WEC --- */
+    --ferrari: #ff2800;
+    --toyota: #eb0a1e;
+    --porsche: #e4002b;
+    --peugeot: #00205b;
+    --cadillac: #002868;
+    --bmw: #1c69d4;
+    --corvette: #ffcc00;
+    --aston: #003f2d;
+    --mclaren: #ff8700;
+    --lexus: #2f2f2f;
+    --vista: #990000;
+
+    /* --- Moto --- */ 
+    --ducati: #e60000;
+    --ktm: #f60;
+    --ktm-tech3: #ff6f00;
+    --yamaha: #00205b;
+    --vr46: #ffd700;
+    --gresini: #88ccee;
+    --aprilia: #000000;
+    --lcr-castrol: #005baa;
+    --lcr-idemitsu: #bb1133;
+    --trackhouse: #007f5f;
+    --pramac: #660099;
+    --honda-hrc: #da291c;
 }
 
 body:nth-child(2) {
     margin-top: var(--margin-after-header-plus);
 }
+
+#f1_h1, #wec_h1, #moto_h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#f1_h1 {color: var(--f1);}
+#wec_h1 {color: var(--wec);}
+#moto_h1 {color: var(--moto);}
 
 #results, #next_race {
     border-radius: 10px;
@@ -71,8 +109,9 @@ body:nth-child(2) {
 }
 
 #results {
+    position: relative;
     background-color: #fafafa;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 5px 5px 10px var(--grey);
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 50px 50px 30px 30px 30px 135px;
@@ -100,55 +139,65 @@ body:nth-child(2) {
             gap: 5px;
         }
 
-        & .mcl {
-            text-decoration: underline var(--mcl);
-        }
-    
-        & .mer {
-            text-decoration: underline var(--mer);
-        }
-    
-        & .rbl {
-            text-decoration: underline var(--rbl);
-        }
-    
-        & .fer {
-            text-decoration: underline var(--fer);
-        }
-    
-        & .haa {
-            text-decoration: underline var(--haa);
-        }
-    
-        & .wil {
-            text-decoration: underline var(--wil);
-        }
-    
-        & .ast {
-            text-decoration: underline var(--ast);
-        }
-    
-        & .vis {
-            text-decoration: underline var(--vis);
-        }
-    
-        & .alp {
-            text-decoration: underline var(--alp);
-        }
-    
-        & .kic {
-            text-decoration: underline var(--kic);
-        }
+        /* --- F1 --- */
+
+        & .mcl {text-decoration: underline var(--mcl);}
+        & .mer {text-decoration: underline var(--mer);}
+        & .rbl {text-decoration: underline var(--rbl);}
+        & .fer {text-decoration: underline var(--fer);}
+        & .haa {text-decoration: underline var(--haa);}
+        & .wil {text-decoration: underline var(--wil);}
+        & .ast {text-decoration: underline var(--ast);}
+        & .vis {text-decoration: underline var(--vis);}
+        & .alp {text-decoration: underline var(--alp);}
+        & .kic {text-decoration: underline var(--kic);}
+
+        /* --- WEC --- */
+
+        & .ferrari     {text-decoration: underline var(--ferrari);}
+        & .toyota      {text-decoration: underline var(--toyota);}
+        & .porsche     {text-decoration: underline var(--porsche);}
+        & .peugeot     {text-decoration: underline var(--peugeot);}
+        & .cadillac    {text-decoration: underline var(--cadillac);}
+        & .bmw         {text-decoration: underline var(--bmw);}
+        & .corvette    {text-decoration: underline var(--corvette);}
+        & .aston       {text-decoration: underline var(--aston);}
+        & .mclaren     {text-decoration: underline var(--mclaren);}
+        & .lexus       {text-decoration: underline var(--lexus);}
+        & .vista       {text-decoration: underline var(--vista);}
+
+        /* --- Moto --- */
+
+        & .ducati       {text-decoration: underline var(--ducati);}
+        & .ktm          {text-decoration: underline var(--ktm);}
+        & .ktm-tech3    {text-decoration: underline var(--ktm-tech3);}
+        & .yamaha       {text-decoration: underline var(--yamaha);}
+        & .vr46         {text-decoration: underline var(--vr46);}
+        & .gresini      {text-decoration: underline var(--gresini);}
+        & .aprilia      {text-decoration: underline var(--aprilia);}
+        & .lcr-castrol  {text-decoration: underline var(--lcr-castrol);}
+        & .lcr-idemitsu {text-decoration: underline var(--lcr-idemitsu);}
+        & .trackhouse   {text-decoration: underline var(--trackhouse);}
+        & .pramac       {text-decoration: underline var(--pramac);}
+        & .honda-hrc    {text-decoration: underline var(--honda-hrc);}
     }
 
     & #rankings_ext {
+        display: none;
+    }
+
+    & #date_ext {
+        display: none;
+    }
+
+    & .bg_cont {
         display: none;
     }
 }
 
 #next_race {
     background-color: var(--blue);
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 5px 5px 10px var(--grey);
     color: white;
     margin-top: 20px;
     display: grid;
@@ -176,124 +225,153 @@ body:nth-child(2) {
 
 /* --------- Breakpoints --------- */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
     #results {
-        height: 80vh;
-        grid-template-columns: 1fr 1fr 1fr 3fr 4fr;
-        grid-template-rows: 2fr 6fr 1fr 3fr 3fr;
+        color: #fff;
+        height: 70vh;
+        min-height: 550px;
+        grid-template-columns: 1fr 1fr 7fr;
+        grid-template-rows: 15% 15% 10% 15% 7.5% 7.5% 30%;
 
         grid-template-areas: 
-        ".  .  h2 h2   dt  "
-        ".  ly ly rk_e rk_e"
-        "fl ly ly rk_e rk_e"
-        "pl cn nm rk_e rk_e";
+        ".    h2 .   "
+        ".    .  .   "
+        "dt_e .  rk_e"
+        "fl   ly rk_e"
+        "pl   nm rk_e"
+        "cn   .  rk_e"
+        ".    .  .   ";
+
+        & #date {
+            display: none;
+        }
+
+        & #date_ext {
+            grid-area: dt_e;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            & * {
+                margin: 0;
+            }
+        }
+
+        & .layout {
+            filter: invert(0);
+        }
 
         & #rankings {
             display: none;
         }
 
         & #rankings_ext {
+            font-size: min(1.5vw, 18px);
             display: inline;
-            
+            border-radius: 10px;
+            color: var(--blue);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            box-shadow: 10px 10px 15px var(--grey) ;
+
+            & tr th {
+                border-bottom: 2px solid var(--blue);
+            }
+
             & tr td:nth-child(2), tr td:nth-child(5) {
                 display: flex;
                 align-items: center;
                 gap: 5px;
             }
-            
-            /* & tr td:nth-child(3), tr td:nth-child(6) {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                gap: 5px;
-            } */
 
-            & .mcl {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--mcl);
+            & tr td:nth-child(3) {
+                padding-right: 10px;
             }
-        
-            & .mer {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--mer);
+
+            & tr td:nth-child(4) {
+                padding-left: 10px;
             }
-        
-            & .rbl {
-                height: 5px;
+
+            & .team_color {
+                height: 8px;
                 aspect-ratio: 1;
-                background-color: var(--rbl);
             }
-        
-            & .fer {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--fer);
+
+            /* --- F1 --- */
+
+            & .mcl {background-color: var(--mcl);}
+            & .mer {background-color: var(--mer);}
+            & .rbl {background-color: var(--rbl);}
+            & .fer {background-color: var(--fer);}
+            & .haa {background-color: var(--haa);}
+            & .wil {background-color: var(--wil);}
+            & .ast {background-color: var(--ast);}
+            & .vis {background-color: var(--vis);}
+            & .alp {background-color: var(--alp);}
+            & .kic {background-color: var(--kic);}
+
+
+            /* --- WEC --- */
+
+            & .ferrari     { background-color: var(--ferrari);}
+            & .toyota      { background-color: var(--toyota);}
+            & .porsche     { background-color: var(--porsche);}
+            & .peugeot     { background-color: var(--peugeot);}
+            & .cadillac    { background-color: var(--cadillac);}
+            & .bmw         { background-color: var(--bmw);}
+            & .corvette    { background-color: var(--corvette);}
+            & .aston       { background-color: var(--aston);}
+            & .mclaren     { background-color: var(--mclaren);}
+            & .lexus       { background-color: var(--lexus);}
+            & .vista       { background-color: var(--vista);}
+
+
+            /* --- Moto --- */
+
+            & .ducati       { background-color: var(--ducati);}
+            & .ktm          { background-color: var(--ktm);}
+            & .ktm-tech3    { background-color: var(--ktm-tech3);}
+            & .yamaha       { background-color: var(--yamaha);}
+            & .vr46         { background-color: var(--vr46);}
+            & .gresini      { background-color: var(--gresini);}
+            & .aprilia      { background-color: var(--aprilia);}
+            & .lcr-castrol  { background-color: var(--lcr-castrol);}
+            & .lcr-idemitsu { background-color: var(--lcr-idemitsu);}
+            & .trackhouse   { background-color: var(--trackhouse);}
+            & .pramac       { background-color: var(--pramac);}
+            & .honda-hrc    { background-color: var(--honda-hrc);}
+        }
+
+        /* --- Backgrounds --- */
+
+        & .bg_cont {
+            display: inline;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: -1;
+
+            & .img_bg{
+                opacity: 0.8;
+                min-height: 100%;
+                min-width: 75vw;
+                position: absolute;
+                bottom: 0;
+                right: 0;
             }
-        
-            & .haa {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--haa);
-            }
-        
-            & .wil {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--wil);
-            }
-        
-            & .ast {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--ast);
-            }
-        
-            & .vis {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--vis);
-            }
-        
-            & .alp {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--alp);
-            }
-        
-            & .kic {
-                height: 5px;
-                aspect-ratio: 1;
-                background-color: var(--kic);
+
+            & .gradient {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(90deg,rgba(4, 45, 95, 1) 25%, rgba(4, 45, 95, 0.36) 45%, rgba(0, 0, 0, 0) 65%);
             }
         }
+
+        &:not(.bg_cont) {
+            z-index: 1;
+        }
     }
-
-    /* Backgrounds */
-
-    /* .bh, .qa, .im, .sa, .sp {
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .bh {
-        background-image: url(https://www.autohebdo.fr/app/uploads/2025/04/DPPI_00125007_1588-753x494.jpg);
-    }
-
-    .qa {
-        background-image: url(QA_bg.png);
-    }
-
-    .im {
-        background-image: url(Imola_bg.png);
-    }
-
-    .sa {
-        background-image: url(SA_bg.png);
-    }
-
-    .sp {
-        background-image: url(SP_bg.png);
-    } */
 }

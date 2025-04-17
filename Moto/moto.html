@@ -24,12 +24,19 @@
         </header>
         <section>
             <nav>
-                <a href="../F1/f1.html">F1</a>
-                <a href="../WEC/wec.html">WEC</a>
-                <a href="./moto.html">Moto GP</a>
+                <a href="../F1/f1.html" class="a_short a_f1">F1</a>
+                <a href="../F1/f1.html" class="a_long a_f1">Formule 1</a>
+                <a href="../WEC/wec.html" class="a_short a_wec">WEC</a>
+                <a href="../WEC/wec.html" class="a_long a_wec">World Endurance Chanmionship</a>
+                <a href="./moto.html" class="a_moto">Moto GP</a>
             </nav>
             <section id="content">
+                <h1 id="moto_h1">Moto GP</h1>
                 <section id="results">
+                    <div class="bg_cont">
+                        <img src="https://cdn-6.motorsport.com/images/amp/Y99KkXXY/s1000/alex-marquez-gresini-racing-ma.webp" alt="Qatar Moto" class="img_bg">
+                        <div class="gradient"></div>
+                    </div>
                     <h2>Résultats</h2>
                     <img src="https://flagsapi.com/QA/flat/48.png" alt="Qatar" title="Qatar" class="flag">
                     <img src="../Assets/QA.png" alt="Circuit International de Losail" title="Circuit International de Losail" class="layout">
@@ -37,6 +44,12 @@
                     <h3 class="place">Losail</h3>
                     <h3 class="country">Qatar</h3>
                     <p id="date">Course du 13/04 (Dim.)</p>
+                    <div id="date_ext">
+                        <p id="day">Dim.</p>
+                        <p id="number">13</p>
+                        <hr>
+                        <p id="month">04</p>
+                    </div>
                     <table id="rankings">
                         <tr>
                             <th>Pos</th>
@@ -46,17 +59,107 @@
                         <tr>
                             <td>🥇</td>
                             <td><img src="https://flagsapi.com/ES/flat/24.png" alt="Espagne" title="Espagne" class="flag"></td>
-                            <td>Marc Márquez</td>
+                            <td class="ducati">Marc Márquez</td>
                         </tr>
                         <tr>
                             <td>🥈</td>
                             <td><img src="https://flagsapi.com/IT/flat/24.png" alt="Italie" title="Italie" class="flag"></td>
-                            <td>Francesco Bagnaia</td>
+                            <td class="ducati">Francesco Bagnaia</td>
                         </tr>
                         <tr>
                             <td>🥉</td>
                             <td><img src="https://flagsapi.com/IT/flat/24.png" alt="Italie" title="Italie" class="flag"></td>
-                            <td>Franco Morbidelli</td>
+                            <td class="vr46">Franco Morbidelli</td>
+                        </tr>
+                    </table>
+                    <table id="rankings_ext">
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Pilote</th>
+                            <th>Équipe</th>
+                            <th>Pos.</th>
+                            <th>Pilote</th>
+                            <th>Équipe</th>
+                        </tr>
+                        <tr>
+                            <td>🥇</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Marc Márquez</td>
+                            <td><div class="team_color ducati"></div>Ducati Lenovo Team</td>
+                            <td>11e</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Enea Bastianini</td>
+                            <td><div class="team_color ktm-tech3"></div>Red Bull KTM Tech3</td>
+                        </tr>
+                        <tr>
+                            <td>🥈</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Francesco Bagnaia</td>
+                            <td><div class="team_color ducati"></div>Ducati Lenovo Team</td>
+                            <td>12e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Álex Rins</td>
+                            <td><div class="team_color yamaha"></div>Monster Energy Yamaha</td>
+                        </tr>
+                        <tr>
+                            <td>🥉</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Franco Morbidelli</td>
+                            <td><div class="team_color vr46"></div>Pertamina Enduro VR46</td>
+                            <td>13e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ZA/flat/24.png" alt="ZA" title="ZA">Brad Binder</td>
+                            <td><div class="team_color ktm"></div>Red Bull KTM Factory</td>
+                        </tr>
+                        <tr>
+                            <td>4e</td>
+                            <td><img class="flag" src="https://flagsapi.com/FR/flat/24.png" alt="FR" title="FR">Johann Zarco</td>
+                            <td><div class="team_color lcr-castrol"></div>LCR Honda Castrol</td>
+                            <td>14e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Maverick Viñales</td>
+                            <td><div class="team_color ktm-tech3"></div>Red Bull KTM Tech3</td>
+                        </tr>
+                        <tr>
+                            <td>5e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Fermín Aldeguer</td>
+                            <td><div class="team_color gresini"></div>BK8 Gresini Racing</td>
+                            <td>15e</td>
+                            <td><img class="flag" src="https://flagsapi.com/JP/flat/24.png" alt="JP" title="JP">Ai Ogura</td>
+                            <td><div class="team_color trackhouse"></div>Trackhouse Racing</td>
+                        </tr>
+                        <tr>
+                            <td>6e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Álex Márquez</td>
+                            <td><div class="team_color gresini"></div>BK8 Gresini Racing</td>
+                            <td>16e</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Fabio Di Giannantonio</td>
+                            <td><div class="team_color vr46"></div>Pertamina Enduro VR46</td>
+                        </tr>
+                        <tr>
+                            <td>7e</td>
+                            <td><img class="flag" src="https://flagsapi.com/FR/flat/24.png" alt="FR" title="FR">Fabio Quartararo</td>
+                            <td><div class="team_color yamaha"></div>Monster Energy Yamaha</td>
+                            <td>17e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Raúl Fernández</td>
+                            <td><div class="team_color trackhouse"></div>Trackhouse Racing</td>
+                        </tr>
+                        <tr>
+                            <td>8e</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Pedro Acosta</td>
+                            <td><div class="team_color ktm"></div>Red Bull KTM Factory</td>
+                            <td>18e</td>
+                            <td><img class="flag" src="https://flagsapi.com/TH/flat/24.png" alt="TH" title="TH">Somkiat Chantra</td>
+                            <td><div class="team_color lcr-idemitsu"></div>LCR Honda Idemitsu</td>
+                        </tr>
+                        <tr>
+                            <td>9e</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Marco Bezzecchi</td>
+                            <td><div class="team_color aprilia"></div>Aprilia Racing</td>
+                            <td>DNF</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Jorge Martín</td>
+                            <td><div class="team_color aprilia"></div>Aprilia Racing</td>
+                        </tr>
+                        <tr>
+                            <td>10e</td>
+                            <td><img class="flag" src="https://flagsapi.com/IT/flat/24.png" alt="IT" title="IT">Luca Marini</td>
+                            <td><div class="team_color honda-hrc"></div>Honda HRC Castrol</td>
+                            <td>DNF</td>
+                            <td><img class="flag" src="https://flagsapi.com/ES/flat/24.png" alt="ES" title="ES">Augusto Fernández</td>
+                            <td><div class="team_color pramac"></div>Prima Pramac Yamaha</td>
                         </tr>
                     </table>
                 </section>
@@ -79,7 +182,7 @@
                 <div id="email_cont">
                     <p>@</p>
                     <input type="email" name="email" id="email"/>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit">S'inscrire</button>
                 </div>
             </section>
             <section class="contact">

@@ -24,12 +24,19 @@
         </header>
         <section>
             <nav>
-                <a href="../F1/f1.html">F1</a>
-                <a href="./wec.html">WEC</a>
-                <a href="../Moto/moto.html">Moto GP</a>
+                <a href="../F1/f1.html" class="a_short a_f1">F1</a>
+                <a href="../F1/f1.html" class="a_long a_f1">Formule 1</a>
+                <a href="./wec.html" class="a_short a_wec">WEC</a>
+                <a href="./wec.html" class="a_long a_wec">World Endurance Chanmionship</a>
+                <a href="../Moto/moto.html" class="a_moto">Moto GP</a>
             </nav>
             <section id="content">
+                <h1 id="wec_h1">World Endurance Championship</h1>
                 <section id="results">
+                    <div class="bg_cont">
+                        <img src="https://endurance24.fr/wp-content/uploads/2025/02/DPPIPRODUCTION_00002940_0446.jpg" alt="Qatar WEC" class="img_bg">
+                        <div class="gradient"></div>
+                    </div>
                     <h2>Résultats</h2>
                     <img src="https://flagsapi.com/QA/flat/48.png" alt="Qatar" title="Qatar" class="flag">
                     <img src="../Assets/QA.png" alt="Circuit International de Losail" title="Circuit International de Losail" class="layout">
@@ -37,6 +44,12 @@
                     <h3 class="place">Losail</h3>
                     <h3 class="country">Qatar</h3>
                     <p id="date">Course du 28/02 (Ven.)</p>
+                    <div id="date_ext">
+                        <p id="day">Ven.</p>
+                        <p id="number">28</p>
+                        <hr>
+                        <p id="month">02</p>
+                    </div>
                     <table id="rankings">
                         <tr>
                             <th>Pos</th>
@@ -46,17 +59,74 @@
                         <tr>
                             <td>🥇</td>
                             <td>Fuoco | Molina | Nielsen</td>
-                            <td>#50</td>
+                            <td class="ferrari">#50</td>
                         </tr>
                         <tr>
                             <td>🥈</td>
                             <td>Kubica | Ye | Hanson</td>
-                            <td>#83</td>
+                            <td class="ferrari">#83</td>
                         </tr>
                         <tr>
                             <td>🥉</td>
                             <td>Pier Guidi | Calado | Giovinazzi</td>
-                            <td>#51</td>
+                            <td class="ferrari">#51</td>
+                        </tr>
+                    </table>
+                    <table id="rankings_ext">
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Voiture / Équipe</th>
+                            <th>Équipage</th>
+                        </tr>
+                        <tr>
+                            <td>🥇</td>
+                            <td><div class="team_color ferrari"></div>Ferrari 499P #50 - Ferrari AF Corse</td>
+                            <td>A. Fuoco, N. Nielsen, M. Molina</td>
+                        </tr>
+                        <tr>
+                            <td>🥈</td>
+                            <td><div class="team_color ferrari"></div>Ferrari 499P #83 - AF Corse</td>
+                            <td>R. Kubica, Y. Ye, P. Hanson</td>
+                        </tr>
+                        <tr>
+                            <td>🥉</td>
+                            <td><div class="team_color ferrari"></div>Ferrari 499P #51 - Ferrari AF Corse</td>
+                            <td>J. Calado, A. Pier Guidi, A. Giovinazzi</td>
+                        </tr>
+                        <tr>
+                            <td>4e</td>
+                            <td><div class="team_color bmw"></div>BMW M Hybrid V8 #15 - BMW M Team WRT</td>
+                            <td>D. Vanthoor, R. Marciello, K. Magnussen</td>
+                        </tr>
+                        <tr>
+                            <td>5e</td>
+                            <td><div class="team_color toyota"></div>Toyota GR010 Hybrid #8 - Toyota Gazoo Racing</td>
+                            <td>S. Buemi, B. Hartley, R. Hirakawa</td>
+                        </tr>
+                        <tr>
+                            <td>6e</td>
+                            <td><div class="team_color toyota"></div>Toyota GR010 Hybrid #7 - Toyota Gazoo Racing</td>
+                            <td>K. Kobayashi, N. de Vries, M. Conway</td>
+                        </tr>
+                        <tr>
+                            <td>7e</td>
+                            <td><div class="team_color bmw"></div>BMW M Hybrid V8 #20 - BMW M Team WRT</td>
+                            <td>R. Rast, S. van der Linde, R. Frijns</td>
+                        </tr>
+                        <tr>
+                            <td>8e</td>
+                            <td><div class="team_color cadillac"></div>Cadillac V-Series.R #12 - Cadillac Hertz Team JOTA</td>
+                            <td>W. Stevens, A. Lynn, N. Nato</td>
+                        </tr>
+                        <tr>
+                            <td>9e</td>
+                            <td><div class="team_color peugeot"></div>Peugeot 9X8 #93 - Peugeot Sport</td>
+                            <td>J.-É. Vergne, M. Jensen, P. di Resta</td>
+                        </tr>
+                        <tr>
+                            <td>10e</td>
+                            <td><div class="team_color porsche"></div>Porsche 963 #5 - Porsche Penske Motorsport</td>
+                            <td>J. Andlauer, M. Christensen, M. Jaminet</td>
                         </tr>
                     </table>
                 </section>
@@ -79,7 +149,7 @@
                 <div id="email_cont">
                     <p>@</p>
                     <input type="email" name="email" id="email"/>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit">S'inscrire</button>
                 </div>
             </section>
             <section class="contact">

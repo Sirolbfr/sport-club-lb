@@ -23,15 +23,18 @@
         </header>
         <section>
             <nav>
-                <a href="F1/f1.html">F1</a>
-                <a href="WEC/wec.html">WEC</a>
-                <a href="Moto/moto.html">Moto GP</a>
+                <a href="./F1/f1.html" class="a_short a_f1">F1</a>
+                <a href="./F1/f1.html" class="a_long a_f1">Formule 1</a>
+                <a href="./WEC/wec.html" class="a_short a_wec">WEC</a>
+                <a href="./WEC/wec.html" class="a_long a_wec">World Endurance Chanmionship</a>
+                <a href="./Moto/moto.html" class="a_moto">Moto GP</a>
             </nav>
             <section id="crsl_cont">
                 <ul id="slides">
                     <li id="crsl_1">
                         <div class="title">
                             <p class="category">Formule 1</p>
+                            <hr>
                             <h3 class="crsl_title">Cadiilac, la 11e écurie qui prendra part au championnat de F1 en 2026</h3>
                         </div>
                         <div class="image_cont">
@@ -41,6 +44,7 @@
                     <li id="crsl_2">
                         <div class="title">
                             <p class="category">World Rallye Chanmionship</p>
+                            <hr>
                             <h3 class="crsl_title">Sanctions de la FIA pour langage grossier de certains pilotes</h3>
                         </div>
                         <div class="image_cont">
@@ -50,28 +54,47 @@
                     <li id="crsl_3">
                         <div class="title">
                             <p class="category">World Endurance Chanmionship</p>
+                            <hr>
                             <h3 class="crsl_title">L'arrivée en WEC de McLaren avec sa nouvelle Hypercar</h3>
                         </div>
                         <div class="image_cont">
-                            <img src="https://media.ouest-france.fr/v1/pictures/MjAyNDA2YTE0NWQ3OTRhNmYwZGNmMDAwNWZkMDUxZjIzZTkwZTc?width=630&height=354&focuspoint=56%2C57&cropresize=1&client_id=bpeditorial&sign=9fed40fdb1852c0cc11b5151ab2043fa303fcad0d66fa2baf5eb9e7452fc902c" alt="Adrien Fourmaux sanctionné" title="Adrien Fourmaux sanctionné">
+                            <img src="https://media.ouest-france.fr/v1/pictures/MjAyNDA2YTE0NWQ3OTRhNmYwZGNmMDAwNWZkMDUxZjIzZTkwZTc?width=630&height=354&focuspoint=56%2C57&cropresize=1&client_id=bpeditorial&sign=9fed40fdb1852c0cc11b5151ab2043fa303fcad0d66fa2baf5eb9e7452fc902c" alt="Nouvelle Hypercar McLaren" title="Nouvelle Hypercar McLaren">
                         </div>
                     </li>
                     <li id="crsl_4">
                         <div class="title">
                             <p class="category">Moto GP</p>
+                            <hr>
                             <h3 class="crsl_title">Début imminent du nouveau moteur V4 de Yamaha en Moto GP</h3>
                         </div>
                         <div class="image_cont">
-                            <img src="https://motociclismo.pt/wp-content/smush-webp/2025/04/202504MEYM__GG93589_Quartararo-1140x570.jpg.webp" alt="Adrien Fourmaux sanctionné" title="Adrien Fourmaux sanctionné" class="crsl_img">
+                            <img src="https://motociclismo.pt/wp-content/smush-webp/2025/04/202504MEYM__GG93589_Quartararo-1140x570.jpg.webp" alt="Fabio Quartararo" title="Fabio Quartararo" class="crsl_img">
                         </div>
                     </li>
                 </ul>
+            </section>
+            <section>
+                <div class="goto" id="goto_1"></div>
+                <div class="goto" id="goto_2"></div>
+                <div class="goto" id="goto_3"></div>
+                <div class="goto" id="goto_4"></div>
             </section>
             <section id="content">
                 <article>
                     <h2>Qui sommes-nous ?</h2>
                     <img src="Assets/fia.jpg" alt="FIA Logo">
-                    <p>La Fédération Internationale de l'Automobile (<a href="https://www.fia.com">FIA</a>), créée en 1904, régit le sport automobile dans le monde entier. Elle organise et réglemente des compétitions internationnales telles que la <a href="https://www.formula1.com" target="_blank">Formule 1</a>, le Rallye (<a href="https://www.wrc.com" target="_blank">WRC</a>) ou encore l'Endurance (<a href="https://www.fiawec.com/en/">WEC</a>). Depuis quelques dizaines d'années, son rôle s'est étendu à améliorer les normes de sécurité et aussi à être plus respectueuse de l'environnement (voir recherches sur l'<a href="https://www.formula1.com/en/latest/article/formula-1-on-course-to-deliver-100-sustainable-fuels-for-2026.1szcnS0ehW3I0HJeelwPam" target="_blank">efuel</a>).</p>
+                    <div class="desc">
+                        <p>La Fédération Internationale de l'Automobile (<a href="https://www.fia.com">FIA</a>), créée en 1904, régit le sport automobile dans le monde entier. Elle organise et réglemente des compétitions internationnales telles que la <a href="https://www.formula1.com" target="_blank">Formule 1</a>, le Rallye (<a href="https://www.wrc.com" target="_blank">WRC</a>) ou encore l'Endurance (<a href="https://www.fiawec.com/en/">WEC</a>). Depuis quelques dizaines d'années, la <a href="#sec_rout">sécurité routière</a> et la protection de l'environnement (voir recherches sur l'<a href="https://www.formula1.com/en/latest/article/formula-1-on-course-to-deliver-100-sustainable-fuels-for-2026.1szcnS0ehW3I0HJeelwPam" target="_blank">efuel</a>) sont devenus des objectifs principaux dans sa recherche et son développement.</p>
+                    </div>
+                </article>
+                <article id="sec_rout">
+                    <h2>Sécurité routière</h2>
+                    <img src="Assets/halo.jpg" alt="Halo de F1">
+                    <div class="desc">
+                        <p>La sécurité routière depuis le début de la FIA a fait des progrès exceptionnels et ce, grâce aux efforts combinés de la fédération et de pilotes aspirants à un sport plus sûr. En effet, dans les années 1960, une course sur huit de Formule 1 entraînait une mort. On peut noter par exemple les morts de Ayrton Senna ou de Jim Clarke mais encore l'accident de Niki Lauda en 1976.</p>
+                        <p>En travaillant pour que ces drames n'arrivent plus, la sécurité a été renforcée dans les voitures : le halo (voir image) a déjà fait ses preuves malgrè qu'il ait seulement été obligatoire en 2018, les combinaisons ignifugées protègent des incendies et le harnais 6 points obligatoires.</p>
+                        <p>De plus, elle a aussi été renforcée sur les circuits, par exemple en aménageant des zones de dégagement ou des bacs à graviers si jamais les freins viennent à faiblir ou aussi une présence d'une voiture médicale pour accroitre la réactivité en cas d'accident.</p>
+                    </div>
                 </article>
             </section>
         </section>
@@ -83,7 +106,7 @@
                 <div id="email_cont">
                     <p>@</p>
                     <input type="email" name="email" id="email"/>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit">S'inscrire</button>
                 </div>
             </section>
             <section class="contact">

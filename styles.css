@@ -46,7 +46,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
     padding: 15px 0;
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ header {
 
 nav {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 84px;
     left: 0;
     right: 0;
@@ -97,19 +97,41 @@ nav {
         text-align: center;
     }
 
-    & :nth-child(1) {
+    & .a_f1 {
         color: var(--f1);
         border-right: 1px solid var(--grey);
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: var(--f1);
+            color: var(--dark_blue);
+        }
     }
 
-    & :nth-child(2) {
+    & .a_wec {
         color: var(--wec);
         border-right: 1px solid var(--grey);
+        transition: all 0.5s;
+        
+        &:hover {
+            background-color: var(--wec);
+            color: var(--dark_blue);
+        }
     }
 
-    & :nth-child(3) {
+    & .a_moto {
         color: var(--moto);
         border-right: 1px solid var(--dark_blue);
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: var(--moto);
+            color: var(--dark_blue);
+        }
+    }
+
+    & .a_long {
+        display: none;
     }
 }
 
@@ -199,6 +221,15 @@ footer {
 /* --------- BREAKPOINTS --------- */
 
 @media screen and (min-width: 900px) {
+    nav {
+        & .a_long {
+            display: inline;
+        }
+
+        & .a_short {
+            display: none;
+        }
+    }
 
     #divider {
         width: 90%;
@@ -209,9 +240,4 @@ footer {
         margin-bottom: 25px;
         justify-content: space-evenly;
     }
-
-}
-
-@media screen and (min-width: 1000px) {
-
 }

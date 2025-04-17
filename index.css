@@ -14,34 +14,41 @@ body {
     margin: 0;
     left: 0;
     width: 100%;
+    max-height: 450px;
 
     & #slides {
         width: 100%;
         display: flex;
         overflow-x: scroll;
+        overflow-y: hidden;
         scroll-snap-type: x mandatory;
-        anchor-name: --caroussel; /* Scroll buttons */
         padding: 0;
         margin: 0;
         height: 30vw;
+        max-height: 450px;
 
         & li {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 45% 55%;
             list-style-type: none;
             background-color: var(--blue);
             flex: 0 0 100%;
             scroll-snap-align: center;
             align-items: center;
+            max-height: 450px;
 
             & .title {
-                & h3 {
+                & .crsl_title {
                     color: white;
                     padding: 0px 7.5%;
                     font-size: 2.8vw;
                 }
 
                 & .category {
+                    display: none;
+                }
+
+                & hr {
                     display: none;
                 }
             
@@ -52,59 +59,26 @@ body {
                 position: relative;
                 overflow: hidden;
                 height: 30vw;
+                max-height: 450px;
 
                 & img {
                     position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    aspect-ratio: 1;
-                    min-width: 100%;
-                    max-height: 100%;
-                    -webkit-transform: translateY(-50%) translateX(-50%);
-                    transform: translateY(-50%) translateX(-50%);
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    max-width: 100%;
+                    min-height: 100%;
                 }
             }
         }
 
-        /* --------- Scroll Buttons (WIP) --------- */
+        /* --------- Scroll Buttons --------- */
 
-        &::scroll-button(*) {
-            border: 0;
-            font-size: 2rem;
-            background: none;
-            color: rgb(0 0 0 / 0.7);
-            cursor: pointer;
-            position: absolute;
-            position-anchor: --caroussel;
-
-            &:hover {
-                color: rgb(0 0 0 / 1);
-            }
-
-            &:focus {
-                color: rgb(0 0 0 / 1);
-            }
-
-            &:active {
-                translate: 1px 1px;
-            }
-
-            &:disabled {
-                color: rgb(0 0 0 / 0.2);
-                cursor: unset;
-            }
-        }
-
-        &::scroll-button(left) {
-            content: "◄";
-            right: calc(anchor(left) - 70px);
-            bottom: calc(anchor(top) + 13px);
-        }
-          
-        &::scroll-button(right) {
-            content: "►";
-            left: calc(anchor(right) - 70px);
-            bottom: calc(anchor(top) + 13px);
+        .goto {
+            height: 15px;
+            width: 15px;
+            background-color: var(--grey);
+            z-index: 15;
         }
     }
 }
@@ -123,22 +97,49 @@ article {
     & img {
         width: 80%;
     }
+
+    &:nth-child(2) img {
+        order: 2;
+    }
 }
 
 
 /* --------- Breakpoints --------- */
 
-@media screen and (max-width: 500px) {
-
-}
-
 @media screen and (min-width: 800px) {
-    .category {
-        display: inline;
-        color: var(--grey);
+    #crsl_cont #slides li .title {
+        & .category {
+            display: inline;
+            color: var(--grey);
+            padding: 0px 7.5%;
+        }
+
+        & hr {
+            display: block;
+            position: relative;
+            right: 32.5%;
+            width: 20%;
+            opacity: 0.5;
+        }
     }
 
-    body {
-        color: red;
+    article {
+        & h2 {grid-area: h2;}
+        & img {grid-area: img;}
+        & .desc {grid-area: desc;}
+        display: grid;
+        grid-template: 65px 1fr/ 2fr 3fr;
+        
+        grid-template-areas: 
+        "h2 h2"
+        "img desc";
+
+        & .desc p {
+            font-size: 1.25vw;
+        }
+
+        & img {
+            width: 33vw;
+        }
     }
 }
